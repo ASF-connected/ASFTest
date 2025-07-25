@@ -1,95 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>取説解説書</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: left;
-            background-color: #f4f4f4;
-            padding-top: 10px;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        h2 {
-            font-size: 28px;
-            color: #333;
-        }
-        .logo2 {
-            max-width: 45%;
-            width: 200px;  
-            height: auto; 
-            position: absolute;
-            top: 1%;
-            right: 3%;
-        }
-        .photo1 {
-            max-width: 90%;
-            height: auto; 
-        }
-        .space-A{
-            margin: 1em 0 0;
-        }
-        .link-table {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-        }
-        .link-table td {
-            padding: 15px;
-            border: 1px solid #ddd;
-        }
-        .link-table a {
-            display: block;
-            padding: 10px;
-            color: rgb(50, 22, 205);
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .link-table a:hover {
-            background-color: #A8A8A8;
-        }
-        .table-container {
-            overflow-x: auto;
-            width: 100%;
-        }
-        table {
-            width: 100%;
-            min-width: 400px;
-        }
-    </style>
-</head>
-<body>
-    <h2>取扱説明書</h2>   
-    <img src="file/ASF_logo.png" alt="ロゴ" class="logo2">
-    <div class="table-container">
-        <table class="link-table table">
-            <tr>
-                <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 40%;">モデル名</td>
-                <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 60%;">リンク</td>
-            </tr>
-            <tr>
-                <td rowspan="4">ASF2.0</td>
-            </tr>
-            <tr>
-                <td><a href="G050-2023.html">2023年取扱説明書</a></td>
-            </tr>
-            <tr>
-                <td><a href="G050-2024.html">2024年取扱説明書</a></td>
-            </tr>
-            <tr>
-                <td><a href="G050-2025.html">2025年取扱説明書</a></td>
-            </tr>
-        </table>
-    </div>
-    <p class="space-A">
-        下の画像のDATEが生産年です(運転席Bピラーにある車両仕様ラベル)<br>
-        <img src="file/vehicle.png" alt="ロゴ" width="500" class="photo1" style="vertical-align: middle; margin-left: 5px;">
-    </p>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -101,11 +9,13 @@
       font-family: sans-serif;
       margin: 0;
     }
+
     nav {
       background-color: #333;
-      color: white;
+      color: rgb(203, 203, 203);
       padding: 10px;
     }
+
     nav ul {
       list-style: none;
       margin: 0;
@@ -113,15 +23,19 @@
       display: flex;
       flex-wrap: wrap;
     }
+
     nav li {
       position: relative;
     }
+
     nav > ul > li {
       padding: 10px 15px;
     }
+
     nav li:hover > ul {
       display: block;
     }
+
     nav ul ul {
       display: none;
       position: absolute;
@@ -130,31 +44,79 @@
       left: 0;
       min-width: 150px;
     }
+
     nav ul ul li {
       padding: 10px;
     }
+
     .model-box {
       border: 1px solid #ccc;
-      margin: 10px;
-      padding: 10px;
+      margin: 10px auto;
+      padding: 20px;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: center; /* 縦中央揃え */
       justify-content: flex-start;
+      width: 100%;
+      max-width: 2000px;
+      box-sizing: border-box;
+      gap: 50px; /* 画像とリンクの間 */
     }
 
-    .model-img {
-      width: 150px;
-      margin-right: 20px;
+    .car-image-container {
+      width: 100%;
+      max-width: 400px;
+      flex-shrink: 0; 
+    }
+
+    .car-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .car-caption {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: #555;
     }
 
     .model-links {
+      flex-grow: 1; /* 残りのスペースを使う */
+      max-width: 80%; /* 最大幅60% */
+      min-width: 180px; /* 最小幅300px */
       display: flex;
       flex-direction: column;
+      justify-content: center;
+    }
+
+    .model-links a {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      margin: 8px 0;
+      transition: background-color 0.2s, box-shadow 0.2s;
+    }
+
+    .model-links a:hover {
+      background-color: #898989;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .accordion-container {
+      display: none;
+      width: 100%;
     }
 
     .accordion-toggle {
-      display: none;
       background-color: #0078D7;
       color: white;
       padding: 8px;
@@ -163,37 +125,76 @@
       text-align: left;
       cursor: pointer;
       font-size: 1em;
+      margin-top: 10px;
     }
 
     .accordion-content {
       display: none;
       flex-direction: column;
-      padding: 0 10px;
+      padding: 10px 0;
     }
 
     .accordion-content a {
-      padding: 5px 0;
+      display: block;
+      padding: 12px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      text-align: center;
       text-decoration: none;
-      color: #0078D7;
+      color: #333;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: background-color 0.2s;
     }
 
-    /* スマホ表示: 画面幅600px以下の場合 */
-    @media screen and (max-width: 600px) {
+    .accordion-content a:hover {
+      background-color: #898989;
+    }
+
+    .accordion-content.open {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1000px) {
+      .model-box {
+          max-width: 70%;   /* 最大幅を画面の70%に制限 */
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
       .model-box {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        width: 98%;
       }
 
       .model-links {
         display: none;
       }
 
-      .accordion-toggle {
+      .accordion-container {
         display: block;
       }
 
       nav ul {
         flex-direction: column;
+      }
+
+      .car-image-container {
+        width: 100%;
+        align-items: center;
+      }
+
+      .car-image {
+        max-width: 100%;
+      }
+
+      .accordion-toggle {
+        padding: 0.5em;
+        background-color: #0078D7;
+        border: none;
+        cursor: pointer;
       }
     }
   </style>
@@ -202,48 +203,51 @@
 
 <nav>
   <ul>
-    <li>マニュアル
-      <ul>
-        <li><a href="/manual1.pdf" style="color:white;">取扱説明書</a></li>
-        <li><a href="/manual2.pdf" style="color:white;">整備手順書</a></li>
-      </ul>
-    </li>
     <li><a href="/faq.html" style="color:white;">FAQ</a></li>
   </ul>
 </nav>
 
 <main>
   <h1>ようこそ</h1>
-  <p>こちらは製品マニュアルのページです。</p>
+  <p >こちらは製品マニュアルのページです。</p>
 </main>
 
 <div class="model-box">
-    <img src="https://via.placeholder.com/150" alt="車種画像" class="model-img" />
-    
-    <!-- 広い画面用 -->
-    <div class="model-links">
-      <a href="#">カタログ</a>
-      <a href="#">取扱説明書</a>
-      <a href="#">仕様詳細</a>
-    </div>
-
-    <!-- 狭い画面用 -->
-    <button class="accordion-toggle" onclick="toggleAccordion(this)">メニューを開く</button>
-    <div class="accordion-content">
-      <a href="#">カタログ</a>
-      <a href="#">取扱説明書</a>
-      <a href="#">仕様詳細</a>
+  <div class="car-image-container">
+    <div class="car-image-wrapper">
+      <img src="file/G050.png" alt="車種画像" class="car-image" />
+      <p class="car-caption">ASF 2.0</p>
     </div>
   </div>
 
-  <script>
-    function toggleAccordion(button) {
-      const content = button.nextElementSibling;
-      content.style.display = (content.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
+  <div class="model-links">
+    <a href="#">2023年取扱説明書</a>
+    <a href="#">2024年取扱説明書</a>
+    <a href="#">2025年取扱説明書</a>
+  </div>
 
+  <!-- モバイル用アコーディオン -->
+  <div class="accordion-container">
+    <button class="accordion-toggle">関連リンク</button>
+    <div class="accordion-content">
+      <a href="#">2023年取扱説明書</a>
+      <a href="#">2024年取扱説明書</a>
+      <a href="#">2025年取扱説明書</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.accordion-toggle');
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        content.classList.toggle('open');
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
-
