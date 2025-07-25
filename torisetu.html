@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -89,4 +89,161 @@
         <img src="file/vehicle.png" alt="ロゴ" width="500" class="photo1" style="vertical-align: middle; margin-left: 5px;">
     </p>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>マニュアル例</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav li {
+      position: relative;
+    }
+    nav > ul > li {
+      padding: 10px 15px;
+    }
+    nav li:hover > ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+    }
+    nav ul ul li {
+      padding: 10px;
+    }
+    .model-box {
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .model-img {
+      width: 150px;
+      margin-right: 20px;
+    }
+
+    .model-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .accordion-toggle {
+      display: none;
+      background-color: #0078D7;
+      color: white;
+      padding: 8px;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .accordion-content {
+      display: none;
+      flex-direction: column;
+      padding: 0 10px;
+    }
+
+    .accordion-content a {
+      padding: 5px 0;
+      text-decoration: none;
+      color: #0078D7;
+    }
+
+    /* スマホ表示: 画面幅600px以下の場合 */
+    @media screen and (max-width: 600px) {
+      .model-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .model-links {
+        display: none;
+      }
+
+      .accordion-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li>マニュアル
+      <ul>
+        <li><a href="/manual1.pdf" style="color:white;">取扱説明書</a></li>
+        <li><a href="/manual2.pdf" style="color:white;">整備手順書</a></li>
+      </ul>
+    </li>
+    <li><a href="/faq.html" style="color:white;">FAQ</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>ようこそ</h1>
+  <p>こちらは製品マニュアルのページです。</p>
+</main>
+
+<div class="model-box">
+    <img src="https://via.placeholder.com/150" alt="車種画像" class="model-img" />
+    
+    <!-- 広い画面用 -->
+    <div class="model-links">
+      <a href="#">カタログ</a>
+      <a href="#">取扱説明書</a>
+      <a href="#">仕様詳細</a>
+    </div>
+
+    <!-- 狭い画面用 -->
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">メニューを開く</button>
+    <div class="accordion-content">
+      <a href="#">カタログ</a>
+      <a href="#">取扱説明書</a>
+      <a href="#">仕様詳細</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      content.style.display = (content.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+
+
+</body>
 </html>
+
