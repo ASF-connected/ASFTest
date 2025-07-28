@@ -198,6 +198,10 @@
       background-color: #555;
     }
 
+    .responsive-logo {
+      width: 200px;
+      height: auto;
+    }
 
     @media screen and (min-width: 1000px) {
       .model-box {
@@ -245,6 +249,10 @@
         font-size: 1.2rem;
         transition: transform 0.2s ease;
       }
+
+      .responsive-logo {
+        width: 120px;
+      }
     }
   </style>
 </head>
@@ -268,7 +276,7 @@
   </div>
 
   <div style="flex-shrink: 0; margin-left: 20px;">
-    <img src="file/ASF_logo.png" alt="ロゴ" style="width: 200px; height: auto;">
+    <img src="file/ASF_logo.png" alt="ロゴ" class="responsive-logo">
   </div>
 </main>
 
@@ -276,7 +284,6 @@
 <div class="model-box">
   <div class="car-image-container">
     <div class="car-image-wrapper">
-      <source srcset="file/G050-1.webp" type="image/webp">
       <img src="file/G050.png" alt="車種画像" class="car-image" />
       <p class="car-caption">ASF2.0</p>
     </div>
