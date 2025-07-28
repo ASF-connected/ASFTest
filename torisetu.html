@@ -55,7 +55,7 @@
       padding: 20px;
       display: flex;
       flex-direction: row;
-      align-items: center; /* 縦中央揃え */
+      align-items: center;
       justify-content: flex-start;
       width: 100%;
       max-width: 2000px;
@@ -84,9 +84,9 @@
     }
 
     .model-links {
-      flex-grow: 1; /* 残りのスペースを使う */
-      max-width: 80%; /* 最大幅60% */
-      min-width: 180px; /* 最小幅300px */
+      flex-grow: 1;
+      max-width: 80%;
+      min-width: 180px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -189,7 +189,6 @@
 
     .accordion-nav-content li a {
       display: block;
-      /* padding: 10px 15px; */
       color: #ddd;
       text-decoration: none;
     }
@@ -199,14 +198,20 @@
     }
 
     .responsive-logo {
-      width: 200px;
+      width: 220px;
       height: auto;
+    }
+
+    .centered-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     @media screen and (min-width: 1000px) {
       .model-box {
-          max-width: 70%;   /* 最大幅を画面の70%に制限 */
-          gap: 50px; /* 画像とリンクの間 */
+          max-width: 70%;
+          gap: 50px;
       }
     }
 
@@ -251,7 +256,7 @@
       }
 
       .responsive-logo {
-        width: 120px;
+        width: 140px;
       }
     }
   </style>
@@ -269,15 +274,15 @@
   </ul>
 </nav>
 
-<main style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
-  <div style="flex: 1; min-width: 200px;">
-    <h1>ようこそ</h1>
-    <p>こちらはASF株式会社の取扱説明書のポータルサイトです。</p>
-  </div>
-
-  <div style="flex-shrink: 0; margin-left: 20px;">
+<main style="padding: 20px;">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <h1 style="margin: 0;">ようこそ</h1>
     <img src="file/ASF_logo.png" alt="ロゴ" class="responsive-logo">
   </div>
+
+  <p style="margin-top: 10px;">
+    こちらはASF株式会社の取扱説明書のポータルサイトです。
+  </p>
 </main>
 
 
@@ -295,7 +300,6 @@
     <a href="#">2025年取扱説明書</a>
   </div>
 
-  <!-- モバイル用アコーディオン -->
   <div class="accordion-container">
     <button class="accordion-toggle">
       取扱説明書リンク（生産年別）
@@ -309,9 +313,11 @@
   </div>
 </div>
 
+<p style= "margin-top: 50px;"class="centered-image-container">下の画像のDATEが生産年です(運転席Bピラーにある車両仕様ラベル)</p>
+<a class="centered-image-container"> <img src="file/vehicle.png" alt="ロゴ" width="500"></a>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // 共通アコーディオン用処理
     const toggleButtons = document.querySelectorAll('.accordion-toggle');
     toggleButtons.forEach(button => {
       button.addEventListener('click', function () {
@@ -324,7 +330,6 @@
       });
     });
 
-    // ナビゲーションアコーディオン（必要な場合）
     const navToggles = document.querySelectorAll('.accordion-nav-toggle');
     navToggles.forEach(button => {
       button.addEventListener('click', function () {
