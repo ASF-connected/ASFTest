@@ -271,6 +271,8 @@
     <div class="car-image-wrapper">
       <source srcset="file/G050-1.webp" type="image/webp">
       <img src="file/G050-1.png" alt="車種画像" class="car-image" />
+      <!-- <img src="file/G050.webp" alt="車種画像" class="car-image" /> -->
+      <!-- <img src="file/G050-1.webp" alt="車種画像" class="car-image" /> -->
       <p class="car-caption">ASF 2.0</p>
     </div>
   </div>
@@ -297,21 +299,29 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // 共通アコーディオン用処理
     const toggleButtons = document.querySelectorAll('.accordion-toggle');
     toggleButtons.forEach(button => {
       button.addEventListener('click', function () {
         const content = this.nextElementSibling;
+        const icon = this.querySelector('.toggle-icon');
+        const isOpen = content.classList.contains('open');
+
         content.classList.toggle('open');
+        icon.textContent = isOpen ? '▼' : '▲';
       });
     });
-  });
 
-  document.addEventListener('DOMContentLoaded', function () {
+    // ナビゲーションアコーディオン（必要な場合）
     const navToggles = document.querySelectorAll('.accordion-nav-toggle');
     navToggles.forEach(button => {
       button.addEventListener('click', function () {
         const content = this.nextElementSibling;
-        content.style.display = (content.style.display === 'flex') ? 'none' : 'flex';
+        const icon = this.querySelector('.toggle-icon');
+        const isOpen = content.style.display === 'flex';
+
+        content.style.display = isOpen ? 'none' : 'flex';
+        if (icon) icon.textContent = isOpen ? '▼' : '▲';
       });
     });
   });
