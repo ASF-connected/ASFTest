@@ -55,11 +55,24 @@
         }
         .table-container {
             overflow-x: auto;
+            min-width: 600px;
             width: 100%;
         }
         table {
             width: 100%;
             min-width: 600px;
+        }
+        .notice-box {
+            background-color: #e6f2ff; /* 薄い青背景 */
+            border: 2px solid #007bff; /* 濃い青の枠線 */
+            border-radius: 8px;        /* 角を丸く */
+            padding: 12px 16px;        /* 内側の余白 */
+            color: #003366;            /* 文字色（濃いめの青） */
+            font-weight: bold;         /* 強調 */
+            max-width: 1110px;
+            min-width: 550px;
+            width: 70%;
+            margin-bottom: 2mm;
         }
     </style>
     <script>
@@ -73,7 +86,7 @@
 <body>
     <h2>サービスマニュアル</h2>   
     <img src="file/ASF_logo.png" alt="ロゴ" class="logo2">
-    <p class = "space-B"></p>    
+    <div class = "notice-box">⚠️各資料は不定期でアップデートを行います。最新の情報をご覧いただくため、ご参照の際は当サイト上から閲覧いただきますようお願い申し上げます。<br>⚠️最新版と旧版でトルク値等の数値が異なる場合は、最新版の数値を正としてご参照いただきますようお願い申し上げます。</div>    
     <div class="table-container">
         <table class="link-table">
             <tr>
