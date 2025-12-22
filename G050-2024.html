@@ -76,8 +76,16 @@
             margin-bottom: 2mm;
         }
     </style>
+    <script>
+        window.onload = function() {
+            if (sessionStorage.getItem("loggedIn") !== "true") {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
 </head>
 <body>
+    <p><a href="links.html">トップページ</a> >> アフターサービス資料集</p>
     <h2>アフターサービス資料集</h2>   
     <img src="file/ASF_logo.png" alt="ロゴ" class="logo2">
     <div class = "notice-box">⚠️各資料は不定期でアップデートを行います。最新の情報をご覧いただくため、ご参照の際は当サイト上から閲覧いただきますようお願い申し上げます。</div>    
@@ -98,27 +106,32 @@
                 <td>2025/02/27更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="ServiceManuel.html">サービスマニュアル</a></td>
+                <td class="left"><a href="ServiceManuel.html?from=G050-2024">サービスマニュアル</a></td>
                 <td class="left">各部位の脱着手順や規定トルク、ワイヤーハーネス図</td>
                 <td>2025/07/02更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="/file/DiagnosticTool–UserManual.pdf">故障診断機取扱説明書</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/DiagnosticTool–UserManual.pdf">故障診断機取扱説明書</a></td>
                 <td class="left">故障診断機の機能説明、システムのエーミング方法等</td>
                 <td>2025/02/27更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="https://smartstorage.lead-ltd.co.jp/share/037594aa921ff108a619680a7765f3c2">パーツカタログ</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="https://smartstorage.lead-ltd.co.jp/share/037594aa921ff108a619680a7765f3c2">パーツカタログ</a></td>
                 <td class="left">補給部品リスト</td>
                 <td>2025/11/19更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="ServiceInformation.html">サービスインフォメーション</a></td>
+                <td class="left"><a href="ServiceInformation.html?from=G050-2024">サービスインフォメーション</a></td>
                 <td class="left">リコール・サービスキャンペーン情報</td>
-                <td>2025/02/27更新</td>            
+                <td>2025/12/15更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="KensyuManual.html">研修資料</a></td>
+                <td class="left"><a href="Proceduremanual.html?from=G050-2024">作業手順書</a></td>
+                <td class="left">特定部品に関する作業手順書集</td>
+                <td>2025/12/09更新</td>            
+            </tr>
+            <tr>
+                <td class="left"><a href="KensyuManual.html?from=G050-2024">研修資料</a></td>
                 <td class="left">販売店研修時の資料</td>
                 <td>2025/07/03更新</td>            
             </tr>

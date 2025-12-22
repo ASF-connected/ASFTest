@@ -72,6 +72,7 @@
     </script>
 </head>
 <body>
+    <p><a href="links.html">トップページ</a> >> <a id="back-link" href="#">アフターサービス資料集</a> >> 研修資料</p>
     <h2>研修資料</h2>   
     <img src="file/ASF_logo.png" alt="ロゴ" class="logo2">
     <p class = "space-B"></p>    
@@ -84,22 +85,36 @@
             </tr>
             <tr>
                 <td rowspan="10">ASF2.0</td> 
-                <td class="left"><a href="/file/ASF2.0_FunctionOverview_ver2.pdf">ASF2.0_機能紹介</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/ASF2.0_FunctionOverview_ver2.pdf">ASF2.0_機能紹介</a></td>
                 <td>2025/07/02更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="/file/ASF2.0_FunctionOverview.pdf">整備のポイント</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/ASF2.0_FunctionOverview.pdf">整備のポイント</a></td>
                 <td>2025/07/03更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="/file/AuxiliaryBatteryKillSwitchInstallationProcedure.pdf">補機バッテリーキルスイッチ取付け作業要領</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/AuxiliaryBatteryKillSwitchInstallationProcedure.pdf">補機バッテリーキルスイッチ取付け作業要領</a></td>
                 <td>2025/02/27更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="/file/WarrantyBilling_RequiredInformation(Defect Response).pdf">Warranty請求_必要情報(不具合対応)</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/WarrantyBilling_RequiredInformation(Defect Response).pdf">Warranty請求_必要情報(不具合対応)</a></td>
                 <td>2025/02/27更新</td>            
             </tr>
         </table>
-    </div>  
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const from = params.get("from");
+
+        if (from === "G050-2023") {
+            document.getElementById("back-link").href = "G050-2023.html";
+        } else if (from === "G050-2024") {
+            document.getElementById("back-link").href = "G050-2024.html";
+        } else if (from === "G050-2025") {
+            document.getElementById("back-link").href = "G050-2025.html";
+        } else {
+            document.getElementById("back-link").href = "G050-2025.html";
+        }
+    </script>
 </body>
 </html>

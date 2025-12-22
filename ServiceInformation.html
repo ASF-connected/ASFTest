@@ -72,6 +72,7 @@
     </script>
 </head>
 <body>
+    <p><a href="links.html">トップページ</a> >> <a id="back-link" href="#">アフターサービス資料集</a> >> サービスインフォメーション</p>
     <h2>サービスインフォメーション</h2>   
     <img src="file/ASF_logo.png" alt="ロゴ" class="logo2">
     <p class = "space-B"></p>    
@@ -79,32 +80,46 @@
         <table class="link-table">
             <tr>
                 <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 10%;">車種名</td>
-                <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 45%;">リンク</td>
-                <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 30%;">ワランティ求償に必要な情報（写真）</td>
+                <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 30%;">リンク</td>
+                <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 45%;">ワランティ求償に必要な情報（写真）</td>
                 <td style="background-color: rgb(112, 171, 255); font-size: 20px; width: 15%;">改訂履歴</td>
             </tr>
             <tr>
                 <td rowspan="7">ASF2.0</td> 
-                <td class="left"><a href="/file/24-20-001_Replacementofthemastercylinder.pdf">24-20-001_マスターシリンダー交換</a></td>
-                <td class="left">-</td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/24-20-001_Replacementofthemastercylinder.pdf">24-20-001_マスターシリンダー交換</a></td>
+                <td class="center">-</td>
                 <td>2025/02/28更新</td>      
             </tr>
             <tr>
-                <td class="left"><a href="file/External3861_Passenger-SideAirbagCoverInspectionandReplacement_Rev-03.pdf">外3861_助手席エアバック用カバー点検・交換</a></td>
-                <td class="left"><a href="file/Warranty-Billing_RequiredInformation([Recall] Passenger-SideAirbagModuleStorageCoverInspectionandReplacement).pdf">Warranty請求_必要情報(【リコール】助手席エアバックモジュール格納用カバー点検・交換)</td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/External3861_Passenger-SideAirbagCoverInspectionandReplacement_Rev-03.pdf">外3861_助手席エアバック用カバー点検・交換</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/Warranty-Billing_RequiredInformation([Recall] Passenger-SideAirbagModuleStorageCoverInspectionandReplacement).pdf">Warranty請求_必要情報(【リコール】助手席エアバックモジュール格納用カバー点検・交換)</td>
                 <td>2025/02/27更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="file/24-20-002_RearDriveShaftReplacement_Rev-05.pdf">24-20-002_リヤドライブシャフト交換</a></td>
-                <td class="left"><a href="file/Warranty-Billing_RequiredInformation([Service Campaign]RearDriveShaftReplacement).pdf">Warranty請求_必要情報(【サービスキャンペーン】リヤドライブシャフト交換)</td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/24-20-002_RearDriveShaftReplacement_Rev-05.pdf">24-20-002_リヤドライブシャフト交換</a></td>
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/Warranty-Billing_RequiredInformation([Service Campaign]RearDriveShaftReplacement).pdf">Warranty請求_必要情報(【サービスキャンペーン】リヤドライブシャフト交換)</td>
                 <td>2025/02/27更新</td>            
             </tr>
             <tr>
-                <td class="left"><a href="file/SI_25-20-001_BrakehoseInspectionandReplacement_rev-02.pdf">外4067_ブレーキホース点検と交換</a></td>
-                <td class="left">-</td>
-                <td>2025/10/08更新</td>  
+                <td class="left"><a target="_blank" rel="noopener noreferrer" href="file/SI_25-20-001_BrakehoseInspectionandReplacement_rev.03.pdf">外4069_ブレーキホース点検と交換</a></td>                
+                <td class="center">-</td>
+                <td>2025/12/15更新</td>  
             </tr>
         </table>
     </div>  
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const from = params.get("from");
+
+        if (from === "G050-2023") {
+            document.getElementById("back-link").href = "G050-2023.html";
+        } else if (from === "G050-2024") {
+            document.getElementById("back-link").href = "G050-2024.html";
+        } else if (from === "G050-2025") {
+            document.getElementById("back-link").href = "G050-2025.html";
+        } else {
+            document.getElementById("back-link").href = "G050-2025.html";
+        }
+    </script>
 </body>
 </html>
